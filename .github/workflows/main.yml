@@ -26,7 +26,7 @@ jobs:
           node-version: '20'
 
       - name: Step 1 - Install ClawHub skill
-        run: npx clawhub@latest install verified-agent-identity
+        run: npx clawhub@latest install verified-agent-identity --force
 
       - name: Install script dependencies
         run: |
@@ -39,3 +39,6 @@ jobs:
       - name: Step 3 - Link Human to Agent
         run: |
           node scripts/manualLinkHumanToAgent.js --challenge '{"name": "okez", "description": "okez AI Agent"}'
+          
+      - name: Step 4 - Add Skill for FAIAR Rewards
+        run: yes | npx skills add BillionsNetwork/verified-agent-identity
