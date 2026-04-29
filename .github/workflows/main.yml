@@ -40,5 +40,5 @@ jobs:
         run: |
           node scripts/manualLinkHumanToAgent.js --challenge '{"name": "okez", "description": "okez AI Agent"}'
           
-      - name: Step 4 - Add Skill for FAIAR Rewards
-        run: yes | npx skills add BillionsNetwork/verified-agent-identity
+     - name: Step 4 - Add Skill for FAIAR Rewards
+        run: npx --yes skills add BillionsNetwork/verified-agent-identity
